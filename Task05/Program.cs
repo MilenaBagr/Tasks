@@ -7,18 +7,18 @@
 
 Console.WriteLine("Введите число:");
 int num = Convert.ToInt32(Console.ReadLine());
-int count = - num;
+int count = -num;
 
-if(num >=0)
+if (num >= 0)
 {
-while (count <= num ) 
-{
-    Console.Write(count+" ");
-    count++;
+    while (count <= num)
+    {
+        Console.Write(count + " ");
+        count++;
+    }
 }
-}
-else 
+else
 {
-   Console.Write("Введено некорректное значение.");
+    Console.Write("Введено некорректное значение.");
 }
 
