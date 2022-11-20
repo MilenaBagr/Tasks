@@ -22,7 +22,7 @@ if (num2 > max)
 {
     max = num2;
 }
-else if (num3 > max)
+if (num3 > max)
 {
     max = num3;
 }
