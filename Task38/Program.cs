@@ -1,4 +1,5 @@
-﻿// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементами массива.
+﻿// Задача 38: Задайте массив вещественных чисел. 
+// Найдите разницу между максимальным и минимальным элементами массива.
 
 // [3.5, 7.1, 22.9, 2.3, 78.5] -> 76.2
 
@@ -24,28 +25,30 @@ void PrintArray(double[] arr)
     Console.WriteLine("]");
 }
 Console.Write("Выводим массив на печать: ");
-double[] array = NewRandowDouble(5, 100, 999);
+double[] array = NewRandowDouble(5, -100, 200);
 PrintArray(array);
 double MaxDifference(double[] arr)
 {
-double maxNumber =arr[0];
-for (int i = 0; i < arr.Length; i++)
-{
-    if (arr[i] > maxNumber) maxNumber = arr[i];
-}
-return maxNumber;
+    double maxNumber = arr[0];
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] > maxNumber) maxNumber = arr[i];
+    }
+    return maxNumber;
 }
 double MinDifference(double[] arr)
 {
-double minNumber = arr[0];
-for (int i = 0; i < arr.Length; i++)
-{
-    if (arr[i] < minNumber) minNumber = arr[i];
-}
-return minNumber;
+    double minNumber = arr[0];
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] < minNumber) minNumber = arr[i];
+    }
+    return minNumber;
 }
 double differenceMax = MaxDifference(array);
 double differenceMin = MinDifference(array);
 double result = differenceMax - differenceMin;
+Console.WriteLine(differenceMax);
+Console.WriteLine(differenceMin);
 Console.Write(@$"Разницу между максимальным и минимальным элементами массива ->
 {Math.Round(result, 2)}");
